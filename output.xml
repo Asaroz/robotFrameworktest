@@ -1,88 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220516 13:57:45.681" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220516 14:22:45.398" rpa="false" schemaversion="3">
 <suite id="s1" name="Test" source="E:\cgi test\robotFrameworkTest\robotFrameworktest\test.robot">
-<test id="s1-t1" name="User must open google and get the results" line="12">
+<test id="s1-t1" name="User must open Bing, sreach for a random name and get the third result" line="12">
 <kw name="Log" library="BuiltIn">
 <arg>${MESSAGE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220516 13:57:45.971" level="INFO">Hello, world!</msg>
-<status status="PASS" starttime="20220516 13:57:45.971" endtime="20220516 13:57:45.971"/>
+<msg timestamp="20220516 14:22:45.611" level="INFO">Hello, world!</msg>
+<status status="PASS" starttime="20220516 14:22:45.610" endtime="20220516 14:22:45.611"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${MESSAGE}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220516 13:57:45.971" endtime="20220516 13:57:45.972"/>
+<status status="PASS" starttime="20220516 14:22:45.611" endtime="20220516 14:22:45.611"/>
 </kw>
 <kw name="Open Browser to URL">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220516 13:57:45.973" level="INFO">Opening browser 'Chrome' to base url 'https://bing.com'.</msg>
-<status status="PASS" starttime="20220516 13:57:45.972" endtime="20220516 13:57:47.405"/>
+<msg timestamp="20220516 14:22:45.612" level="INFO">Opening browser 'Chrome' to base url 'https://bing.com'.</msg>
+<status status="PASS" starttime="20220516 14:22:45.612" endtime="20220516 14:22:47.011"/>
 </kw>
-<status status="PASS" starttime="20220516 13:57:45.972" endtime="20220516 13:57:47.405"/>
+<status status="PASS" starttime="20220516 14:22:45.612" endtime="20220516 14:22:47.011"/>
 </kw>
-<kw name="Fetch Fake Data" library="func">
+<kw name="Create Testdata" library="func">
 <var>${randomName}</var>
-<msg timestamp="20220516 13:57:47.481" level="INFO">&lt;Response [200]&gt;
+<msg timestamp="20220516 14:22:47.088" level="INFO">&lt;Response [200]&gt;
 [{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {'lat': '-37.3159', 'lng': '81.1496'}}, 'phone': '1-770-736-8031 x56442', 'website': 'hildegard.org', 'company': {'name': 'Romaguera-Crona', 'catchPhrase': 'Multi-layered client-server neural-net', 'bs': 'harness real-time e-markets'}}, {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}, {'id': 3, 'name': 'Clementine Bauch', 'username': 'Samantha', 'email': 'Nathan@yesenia.net', 'address': {'street': 'Douglas Extension', 'suite': 'Suite 847', 'city': 'McKenziehaven', 'zipcode': '59590-4157', 'geo': {'lat': '-68.6102', 'lng': '-47.0653'}}, 'phone': '1-463-123-4447', 'website': 'ramiro.info', 'company': {'name': 'Romaguera-Jacobson', 'catchPhrase': 'Face to face bifurcated interface', 'bs': 'e-enable strategic applications'}}, {'id': 4, 'name': 'Patricia Lebsack', 'username': 'Karianne', 'email': 'Julianne.OConner@kory.org', 'address': {'street': 'Hoeger Mall', 'suite': 'Apt. 692', 'city': 'South Elvis', 'zipcode': '53919-4257', 'geo': {'lat': '29.4572', 'lng': '-164.2990'}}, 'phone': '493-170-9623 x156', 'website': 'kale.biz', 'company': {'name': 'Robel-Corkery', 'catchPhrase': 'Multi-tiered zero tolerance productivity', 'bs': 'transition cutting-edge web services'}}, {'id': 5, 'name': 'Chelsey Dietrich', 'username': 'Kamren', 'email': 'Lucio_Hettinger@annie.ca', 'address': {'street': 'Skiles Walks', 'suite': 'Suite 351', 'city': 'Roscoeview', 'zipcode': '33263', 'geo': {'lat': '-31.8129', 'lng': '62.5342'}}, 'phone': '(254)954-1289', 'website': 'demarco.info', 'company': {'name': 'Keebler LLC', 'catchPhrase': 'User-centric fault-tolerant solution', 'bs': 'revolutionize end-to-end systems'}}, {'id': 6, 'name': 'Mrs. Dennis Schulist', 'username': 'Leopoldo_Corkery', 'email': 'Karley_Dach@jasper.info', 'address': {'street': 'Norberto Crossing', 'suite': 'Apt. 950', 'city': 'South Christy', 'zipcode': '23505-1337', 'geo': {'lat': '-71.4197', 'lng': '71.7478'}}, 'phone': '1-477-935-8478 x6430', 'website': 'ola.org', 'company': {'name': 'Considine-Lockman', 'catchPhrase': 'Synchronised bottom-line interface', 'bs': 'e-enable innovative applications'}}, {'id': 7, 'name': 'Kurtis Weissnat', 'username': 'Elwyn.Skiles', 'email': 'Telly.Hoeger@billy.biz', 'address': {'street': 'Rex Trail', 'suite': 'Suite 280', 'city': 'Howemouth', 'zipcode': '58804-1099', 'geo': {'lat': '24.8918', 'lng': '21.8984'}}, 'phone': '210.067.6132', 'website': 'elvis.io', 'company': {'name': 'Johns Group', 'catchPhrase': 'Configurable multimedia task-force', 'bs': 'generate enterprise e-tailers'}}, {'id': 8, 'name': 'Nicholas Runolfsdottir V', 'username': 'Maxime_Nienow', 'email': 'Sherwood@rosamond.me', 'address': {'street': 'Ellsworth Summit', 'suite': 'Suite 729', 'city': 'Aliyaview', 'zipcode': '45169', 'geo': {'lat': '-14.3990', 'lng': '-120.7677'}}, 'phone': '586.493.6943 x140', 'website': 'jacynthe.com', 'company': {'name': 'Abernathy Group', 'catchPhrase': 'Implemented secondary concept', 'bs': 'e-enable extensible e-tailers'}}, {'id': 9, 'name': 'Glenna Reichert', 'username': 'Delphine', 'email': 'Chaim_McDermott@dana.io', 'address': {'street': 'Dayna Park', 'suite': 'Suite 449', 'city': 'Bartholomebury', 'zipcode': '76495-3109', 'geo': {'lat': '24.6463', 'lng': '-168.8889'}}, 'phone': '(775)976-6794 x41206', 'website': 'conrad.com', 'company': {'name': 'Yost and Sons', 'catchPhrase': 'Switchable contextually-based project', 'bs': 'aggregate real-time technologies'}}, {'id': 10, 'name': 'Clementina DuBuque', 'username': 'Moriah.Stanton', 'email': 'Rey.Padberg@karina.biz', 'address': {'street': 'Kattie Turnpike', 'suite': 'Suite 198', 'city': 'Lebsackbury', 'zipcode': '31428-2261', 'geo': {'lat': '-38.2386', 'lng': '57.2232'}}, 'phone': '024-648-3804', 'website': 'ambrose.net', 'company': {'name': 'Hoeger LLC', 'catchPhrase': 'Centralized empowering task-force', 'bs': 'target end-to-end models'}}]
 Name of a person:
- Nicholas Runolfsdottir V</msg>
-<msg timestamp="20220516 13:57:47.481" level="INFO">${randomName} = Nicholas Runolfsdottir V</msg>
-<status status="PASS" starttime="20220516 13:57:47.406" endtime="20220516 13:57:47.481"/>
+ Kurtis Weissnat</msg>
+<msg timestamp="20220516 14:22:47.088" level="INFO">${randomName} = Kurtis Weissnat</msg>
+<status status="PASS" starttime="20220516 14:22:47.011" endtime="20220516 14:22:47.088"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath://input[@id="sb_form_q"]</arg>
 <arg>${randomName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220516 13:57:47.482" level="INFO">Typing text 'Nicholas Runolfsdottir V' into text field 'xpath://input[@id="sb_form_q"]'.</msg>
-<status status="PASS" starttime="20220516 13:57:47.481" endtime="20220516 13:57:47.559"/>
+<msg timestamp="20220516 14:22:47.089" level="INFO">Typing text 'Kurtis Weissnat' into text field 'xpath://input[@id="sb_form_q"]'.</msg>
+<status status="PASS" starttime="20220516 14:22:47.089" endtime="20220516 14:22:47.156"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://label[@id="search_icon"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220516 13:57:47.560" level="INFO">Clicking element 'xpath://label[@id="search_icon"]'.</msg>
-<status status="PASS" starttime="20220516 13:57:47.559" endtime="20220516 13:57:48.080"/>
+<msg timestamp="20220516 14:22:47.157" level="INFO">Clicking element 'xpath://label[@id="search_icon"]'.</msg>
+<status status="PASS" starttime="20220516 14:22:47.157" endtime="20220516 14:22:47.755"/>
 </kw>
+<kw name="Sleep some Time">
+<arg>a=4s</arg>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>${a}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220516 13:57:50.092" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220516 13:57:48.081" endtime="20220516 13:57:50.092"/>
+<msg timestamp="20220516 14:22:51.766" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220516 14:22:47.756" endtime="20220516 14:22:51.766"/>
+</kw>
+<status status="PASS" starttime="20220516 14:22:47.755" endtime="20220516 14:22:51.766"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://Button[@id="bnp_btn_accept"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220516 13:57:50.092" level="INFO">Clicking element 'xpath://Button[@id="bnp_btn_accept"]'.</msg>
-<status status="PASS" starttime="20220516 13:57:50.092" endtime="20220516 13:57:50.196"/>
+<msg timestamp="20220516 14:22:51.767" level="INFO">Clicking element 'xpath://Button[@id="bnp_btn_accept"]'.</msg>
+<status status="PASS" starttime="20220516 14:22:51.767" endtime="20220516 14:22:51.804"/>
 </kw>
+<kw name="Sleep some Time">
+<arg>a=4s</arg>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>${a}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220516 13:57:52.209" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220516 13:57:50.196" endtime="20220516 13:57:52.209"/>
+<msg timestamp="20220516 14:22:55.809" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220516 14:22:51.805" endtime="20220516 14:22:55.809"/>
+</kw>
+<status status="PASS" starttime="20220516 14:22:51.804" endtime="20220516 14:22:55.809"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://li[@class="b_algo"][3]//h2//a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220516 13:57:52.210" level="INFO">Clicking element 'xpath://li[@class="b_algo"][3]//h2//a'.</msg>
-<status status="PASS" starttime="20220516 13:57:52.209" endtime="20220516 13:57:53.066"/>
+<msg timestamp="20220516 14:22:55.810" level="INFO">Clicking element 'xpath://li[@class="b_algo"][3]//h2//a'.</msg>
+<status status="PASS" starttime="20220516 14:22:55.810" endtime="20220516 14:22:56.250"/>
 </kw>
+<kw name="Sleep some Time">
+<arg>a=10s</arg>
 <kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
+<arg>${a}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220516 13:57:58.075" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220516 13:57:53.066" endtime="20220516 13:57:58.075"/>
+<msg timestamp="20220516 14:23:06.264" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220516 14:22:56.251" endtime="20220516 14:23:06.264"/>
+</kw>
+<status status="PASS" starttime="20220516 14:22:56.251" endtime="20220516 14:23:06.264"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220516 13:57:58.075" endtime="20220516 13:58:00.167"/>
+<status status="PASS" starttime="20220516 14:23:06.265" endtime="20220516 14:23:08.351"/>
 </kw>
-<status status="PASS" starttime="20220516 13:57:45.970" endtime="20220516 13:58:00.167"/>
+<status status="PASS" starttime="20220516 14:22:45.610" endtime="20220516 14:23:08.352"/>
 </test>
 <doc>Simple example using SeleniumLibrary.</doc>
-<status status="PASS" starttime="20220516 13:57:45.682" endtime="20220516 13:58:00.168"/>
+<status status="PASS" starttime="20220516 14:22:45.400" endtime="20220516 14:23:08.352"/>
 </suite>
 <statistics>
 <total>
