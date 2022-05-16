@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation       Simple example using SeleniumLibrary.
 Library             SeleniumLibrary   
+Library             func.py
 
 *** Variables ***
 ${MESSAGE}          Hello, world!
@@ -12,7 +13,8 @@ User must open google and get the results
     Log             ${MESSAGE}
     Log To Console  ${MESSAGE}
     Open Browser to URL
-    Input Text      xpath://input[@id="sb_form_q"]  das ist ein test
+    ${randomName}   func.fetch_fake_data
+    Input Text      xpath://input[@id="sb_form_q"]  ${randomName}
     Click Element   xpath://label[@id="search_icon"]
     Sleep           2s
     Click Element   xpath://Button[@id="bnp_btn_accept"]
